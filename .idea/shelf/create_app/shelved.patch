@@ -1,0 +1,158 @@
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <targetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"QUICK_BOOT_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\micha\\.android\\avd\\Pixel_3a_API_33_x86_64.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </targetSelectedWithDropDown>\r\n    <timeTargetWasSelectedWithDropDown value=\"2023-01-03T17:39:48.909299200Z\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+--- a/.idea/deploymentTargetDropDown.xml	(revision 14b724cbf1d2c365607f39bea75782a244d08680)
++++ b/.idea/deploymentTargetDropDown.xml	(date 1672791347298)
+@@ -7,11 +7,34 @@
+         <deviceKey>
+           <Key>
+             <type value="VIRTUAL_DEVICE_PATH" />
+-            <value value="C:\Users\micha\.android\avd\Pixel_3a_API_33_x86_64.avd" />
++            <value value="C:\Users\micha\.android\avd\8_Fold-out_API_33.avd" />
+           </Key>
+         </deviceKey>
+       </Target>
+     </targetSelectedWithDropDown>
+-    <timeTargetWasSelectedWithDropDown value="2023-01-03T17:39:48.909299200Z" />
++    <timeTargetWasSelectedWithDropDown value="2023-01-04T00:14:54.822991200Z" />
++    <multipleDevicesSelectedInDropDown value="true" />
++    <runningDeviceTargetsSelectedWithDialog>
++      <Target>
++        <type value="RUNNING_DEVICE_TARGET" />
++        <deviceKey>
++          <Key>
++            <type value="VIRTUAL_DEVICE_PATH" />
++            <value value="C:\Users\micha\.android\avd\Pixel_3a_API_33_x86_64.avd" />
++          </Key>
++        </deviceKey>
++      </Target>
++    </runningDeviceTargetsSelectedWithDialog>
++    <targetsSelectedWithDialog>
++      <Target>
++        <type value="QUICK_BOOT_TARGET" />
++        <deviceKey>
++          <Key>
++            <type value="VIRTUAL_DEVICE_PATH" />
++            <value value="C:\Users\micha\.android\avd\Nexus_One_API_33.avd" />
++          </Key>
++        </deviceKey>
++      </Target>
++    </targetsSelectedWithDialog>
+   </component>
+ </project>
+\ No newline at end of file
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>buildscript {\r\n    ext {\r\n        compose_ui_version = '1.1.1'\r\n    }\r\n}// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\nplugins {\r\n    id 'com.android.application' version '7.3.0' apply false\r\n    id 'com.android.library' version '7.3.0' apply false\r\n    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	(revision 14b724cbf1d2c365607f39bea75782a244d08680)
++++ b/build.gradle	(date 1672789062776)
+@@ -4,7 +4,7 @@
+     }
+ }// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ plugins {
+-    id 'com.android.application' version '7.3.0' apply false
+-    id 'com.android.library' version '7.3.0' apply false
++    id 'com.android.application' version '7.3.1' apply false
++    id 'com.android.library' version '7.3.1' apply false
+     id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+ }
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n    id 'org.jetbrains.kotlin.android'\r\n}\r\n\r\nandroid {\r\n    namespace 'com.example.lessonplanapp'\r\n    compileSdk 32\r\n\r\n    defaultConfig {\r\n        applicationId \"com.example.lessonplanapp\"\r\n        minSdk 21\r\n        targetSdk 32\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n        vectorDrawables {\r\n            useSupportLibrary true\r\n        }\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = '1.8'\r\n    }\r\n    buildFeatures {\r\n        compose true\r\n    }\r\n    composeOptions {\r\n        kotlinCompilerExtensionVersion '1.1.1'\r\n    }\r\n    packagingOptions {\r\n        resources {\r\n            excludes += '/META-INF/{AL2.0,LGPL2.1}'\r\n        }\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation 'androidx.core:core-ktx:1.7.0'\r\n    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'\r\n    implementation 'androidx.activity:activity-compose:1.3.1'\r\n    implementation \"androidx.compose.ui:ui:$compose_ui_version\"\r\n    implementation \"androidx.compose.ui:ui-tooling-preview:$compose_ui_version\"\r\n    implementation 'androidx.compose.material:material:1.1.1'\r\n    implementation 'androidx.appcompat:appcompat:1.5.1'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'\r\n    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'\r\n    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'\r\n    implementation 'com.google.android.material:material:1.4.0'\r\n    implementation 'com.google.code.gson:gson:2.10'\r\n    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'\r\n    implementation 'com.squareup.retrofit2:retrofit:2.9.0'\r\n    implementation 'com.squareup.okhttp3:okhttp:4.10.0'\r\n    implementation 'com.jakewharton.timber:timber:5.0.1'\r\n    testImplementation 'junit:junit:4.13.2'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.4'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'\r\n    androidTestImplementation \"androidx.compose.ui:ui-test-junit4:$compose_ui_version\"\r\n    debugImplementation \"androidx.compose.ui:ui-tooling:$compose_ui_version\"\r\n    debugImplementation \"androidx.compose.ui:ui-test-manifest:$compose_ui_version\"\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision 14b724cbf1d2c365607f39bea75782a244d08680)
++++ b/app/build.gradle	(date 1672791592891)
+@@ -48,17 +48,17 @@
+ 
+ dependencies {
+ 
+-    implementation 'androidx.core:core-ktx:1.7.0'
+-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+-    implementation 'androidx.activity:activity-compose:1.3.1'
++    implementation 'androidx.core:core-ktx:1.9.0'
++    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
++    implementation 'androidx.activity:activity-compose:1.6.1'
+     implementation "androidx.compose.ui:ui:$compose_ui_version"
+     implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
+-    implementation 'androidx.compose.material:material:1.1.1'
++    implementation 'androidx.compose.material:material:1.3.1'
+     implementation 'androidx.appcompat:appcompat:1.5.1'
+     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+-    implementation 'com.google.android.material:material:1.4.0'
++    implementation 'com.google.android.material:material:1.7.0'
+     implementation 'com.google.code.gson:gson:2.10'
+     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+Index: app/src/main/java/com/example/lessonplanapp/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.lessonplanapp\r\n\r\nimport android.os.Bundle\r\nimport androidx.activity.ComponentActivity\r\nimport androidx.activity.compose.setContent\r\nimport androidx.compose.foundation.BorderStroke\r\nimport androidx.compose.foundation.layout.*\r\nimport androidx.compose.foundation.shape.RoundedCornerShape\r\nimport androidx.compose.material.*\r\nimport androidx.compose.runtime.Composable\r\nimport androidx.compose.ui.Alignment\r\nimport androidx.compose.ui.Modifier\r\nimport androidx.compose.ui.graphics.Color\r\nimport androidx.compose.ui.tooling.preview.Preview\r\nimport androidx.compose.ui.unit.dp\r\nimport com.example.lessonplanapp.ui.theme.LessonPlanAppTheme\r\n\r\nclass MainActivity : ComponentActivity() {\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContent{\r\n            LessonPlanAppTheme() {\r\n                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {\r\n                    HomeView()\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n@Composable\r\nprivate fun HomeView(){\r\n    Column(modifier = Modifier.padding(10.dp).fillMaxHeight(), verticalArrangement = Arrangement.SpaceEvenly) {\r\n        val rowModifier = Modifier.align(Alignment.CenterHorizontally).width(800.dp).height(80.dp)\r\n        val buttonModifier = Modifier.fillMaxSize()\r\n        Row(rowModifier) {\r\n            OutlinedButton(onClick = { /*TODO*/ },\r\n                buttonModifier,\r\n                border = BorderStroke(1.dp, Color.White),\r\n                shape = RoundedCornerShape(25),\r\n                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)\r\n            ) {\r\n               Text(text = \"Wydział Nauk o zdrowiu\")\r\n            }\r\n        }\r\n        Row(rowModifier) {\r\n            OutlinedButton(onClick = { /*TODO*/ },\r\n                buttonModifier,\r\n                border = BorderStroke(1.dp, Color.White),\r\n                shape = RoundedCornerShape(25),\r\n                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {\r\n                Text(text = \"Wydział Nauk Technicznych\")\r\n            }\r\n        }\r\n        Row(rowModifier) {\r\n            OutlinedButton(onClick = { /*TODO*/ },buttonModifier,\r\n                border = BorderStroke(1.dp, Color.White),\r\n                shape = RoundedCornerShape(25),\r\n                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {\r\n                Text(text = \"Wydział Nauk społecznych\")\r\n            }\r\n        }\r\n        Row(rowModifier) {\r\n            OutlinedButton(onClick = { /*TODO*/ },buttonModifier,\r\n                border = BorderStroke(1.dp, Color.White),\r\n                shape = RoundedCornerShape(25),\r\n                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {\r\n                Text(text = \"Wychowanie Fizyczne\")\r\n            }\r\n        }\r\n        Row(rowModifier) {\r\n            OutlinedButton(onClick = { /*TODO*/ },buttonModifier,\r\n                border = BorderStroke(1.dp, Color.White),\r\n                shape = RoundedCornerShape(25),\r\n                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {\r\n                Text(text = \"Erazmus\")\r\n            }\r\n        }\r\n        Row(rowModifier) {\r\n            OutlinedButton(onClick = { /*TODO*/ },buttonModifier,\r\n                border = BorderStroke(1.dp, Color.White),\r\n                shape = RoundedCornerShape(25),\r\n                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {\r\n                Text(text = \"Szukaj pracownika\")\r\n            }\r\n        }\r\n        Row(rowModifier) {\r\n            OutlinedButton(onClick = { /*TODO*/ },buttonModifier,\r\n                border = BorderStroke(1.dp, Color.White),\r\n                shape = RoundedCornerShape(25),\r\n                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {\r\n                Text(text = \"Szukaj sali\")\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n@Preview(showBackground = true)\r\n@Composable\r\nfun DefaultPreview() {\r\n    LessonPlanAppTheme {\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/lessonplanapp/MainActivity.kt b/app/src/main/java/com/example/lessonplanapp/MainActivity.kt
+--- a/app/src/main/java/com/example/lessonplanapp/MainActivity.kt	(revision 14b724cbf1d2c365607f39bea75782a244d08680)
++++ b/app/src/main/java/com/example/lessonplanapp/MainActivity.kt	(date 1672790391520)
+@@ -1,6 +1,7 @@
+ package com.example.lessonplanapp
+ 
+ import android.os.Bundle
++import android.widget.Toast
+ import androidx.activity.ComponentActivity
+ import androidx.activity.compose.setContent
+ import androidx.compose.foundation.BorderStroke
+@@ -14,6 +15,7 @@
+ import androidx.compose.ui.tooling.preview.Preview
+ import androidx.compose.ui.unit.dp
+ import com.example.lessonplanapp.ui.theme.LessonPlanAppTheme
++import com.google.android.material.internal.ContextUtils.getActivity
+ 
+ class MainActivity : ComponentActivity() {
+ 
+@@ -31,11 +33,16 @@
+ 
+ @Composable
+ private fun HomeView(){
+-    Column(modifier = Modifier.padding(10.dp).fillMaxHeight(), verticalArrangement = Arrangement.SpaceEvenly) {
+-        val rowModifier = Modifier.align(Alignment.CenterHorizontally).width(800.dp).height(80.dp)
++    Column(modifier = Modifier
++        .padding(10.dp)
++        .fillMaxHeight(), verticalArrangement = Arrangement.SpaceEvenly) {
++        val rowModifier = Modifier
++            .align(Alignment.CenterHorizontally)
++            .width(800.dp)
++            .height(80.dp)
+         val buttonModifier = Modifier.fillMaxSize()
+         Row(rowModifier) {
+-            OutlinedButton(onClick = { /*TODO*/ },
++            OutlinedButton(onClick ={/*TODO*/},
+                 buttonModifier,
+                 border = BorderStroke(1.dp, Color.White),
+                 shape = RoundedCornerShape(25),
+@@ -78,7 +85,9 @@
+             }
+         }
+         Row(rowModifier) {
+-            OutlinedButton(onClick = { /*TODO*/ },buttonModifier,
++            OutlinedButton(onClick = {
++                /*TODO*/
++            },buttonModifier,
+                 border = BorderStroke(1.dp, Color.White),
+                 shape = RoundedCornerShape(25),
+                 colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
