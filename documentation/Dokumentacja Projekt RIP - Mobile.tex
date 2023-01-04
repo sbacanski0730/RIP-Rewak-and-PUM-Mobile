@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen,
+    }
+
+\title{Projekt\textunderscore RIP - Mobile}
+\author{
+Michał Gałęzyka
+}
+
+
+\date{Styczeń 2023}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Opis funkcjonalny systemu}
+Celem "Projektu\textunderscore RIP - Mobile" było utworzenie mobilnej aplikacji łączącej się z wcześniej utworzonym api. Pobiera ona potrzebne dane z wystawionych endpointów 
+\\
+Założeniem posiadania osobnej aplikacji mobilnej w tym celu jest umożliwienie użytkownikom korzystania z planu zajęć w przystępnej formie nie ważne od miejsca, w którym się znajdują.
+
+\section{Streszczenie opisu technologicznego}
+Kotlin jest językiem przystosowanym pod pisanie aplikacji mobilnych na androida. Jest używany przez większość profesjonalistów zajmujących się tym tematem więc jest to dość oczywisty wybór jeśli bierzemy pod uwagę aplikację, dziłającą na tym systemie. Poza tym na zajęciach na uczelni mieliśmy się okazję z nim zapoznać więc była to doskonała okazja aby poszerzyć wiedzę na jego temat.
+\\
+Retrofit jest paczką dla Kotlin'a, która ułatwia pracę z api. Pozwala ona na uproszczenie kodu z jednoczesnym zwiększeniem wydajności. Zwalnia też to programistę z konieczności pamiętania o wszystkich szczegółach, co pozwala ograniczyć występujące błędy.
+\\
+Jetpack Compose jest paczką dla Kotlin'a upraszczającą tworzenie na nim interfejsu użytkownika. Skraca ona czas wymagany na utworzenie interfejsu jednocześnie pozwalając na uproszczenie kodu i zwiększenie wydajności.
+\\.
+Gson to biblioteka Kotlin do konwersji obiektów Kotlin'owych na odpowiednik JSON, a także ciąg JSON na równoważny obiekt Kotlin'owy.
+
+\section{Instrukcję lokalnego i zdalnego uruchomienia systemu}
+\subsection{Postawienie systemu lokalnie}
+Wymagane oprogramowanie:\\
+Android Studio\\
+Github Desktop – aby móc wprowadzać zmiany, bądź pobierać aktualizacje jeśli są potrzebne. (nie jest wymagany  jeśli jest wbudowany w IDE, bądź jeśli ktoś posiada zainstalowany pakiet GIT do użytku poprzez terminal)\\\\
+Jak postawić środowisko testowe ?\\
+Wystarczy pobrać zawartość repozytorium oraz otworzyć jako projekt w Android Studio
+    
+
+\subsection{Postawienie systemu zdalnie}
+W przypadku postawienia zdalnego wystarczy pobrać wcześniej skompilowany plik .app i zainstalować na urządzeniu wspierającym androida. 
+
+
+\section{Dokumentacja}
+Link do dokumentacji na naszych repozytoriach: 
+api: \url{https://github.com/sbacanski0730/RIP-Rewak-and-PUM-API/tree/main/documentation}\\\\
+web: \url{https://github.com/sbacanski0730/RIP-Rewak-and-PUM-Web/tree/main/documentation}\\\\
+mobile: \url{https://github.com/sbacanski0730/RIP-Rewak-and-PUM-Mobile/tree/main/documentation}\\\\
+
+\section{Wnioski projektowe}
+
+
+
+\end{document}
