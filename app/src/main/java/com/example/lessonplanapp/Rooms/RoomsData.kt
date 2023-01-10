@@ -1,0 +1,7 @@
+package com.example.lessonplanapp.Rooms
+
+
+import com.google.gson.annotations.SerializedName
+import androidx.annotation.Keep
+
+class RoomsData : ArrayList<RoomsDataItemDto>()

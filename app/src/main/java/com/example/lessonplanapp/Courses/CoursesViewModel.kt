@@ -3,20 +3,22 @@ package com.example.lessonplanapp.Courses
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.lessonplanapp.LessonPlanApi
-import com.example.lessonplanapp.Posts.PostsDto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
-class CoursesViewModel(private val api: LessonPlanApi): ViewModel() {
+class CoursesViewModel(
+    private val api: LessonPlanApi,
+    private val departmentName: String
+    ): ViewModel() {
 
-    val state = MutableStateFlow(emptyList<PostsDto>())
+    val state = MutableStateFlow(emptyList<CoursesDataItemDto>())
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
-            val buildings = api.getPosts()
+            val courses = api.getCourses(departmentName)
 
-            state.value = buildings
+            state.value = courses
 
         }
     }

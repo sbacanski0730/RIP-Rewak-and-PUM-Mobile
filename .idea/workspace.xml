@@ -13,26 +13,54 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d5b30fb-9381-4740-ae5f-63803ddebc41" name="Changes" comment="home Page/View&#10;basic of app">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/CoursesViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/Comments/PostsComments.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/Comments/PostsCommentsDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/Posts.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/PostsDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkersActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkersViewModel.kt" afterDir="false" />
+    <list default="true" id="9d5b30fb-9381-4740-ae5f-63803ddebc41" name="Changes" comment="connect with api">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsDataItemDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesDataItemDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/DayCalendar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentDataItemDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomNumbersData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomNumbersDataItemDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomsNumberScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomsNumberViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/TimeEndDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/TimeStartDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsDataItemDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupDataItemDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupsScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/TimeEndDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/TimeStartDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersNameData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersNameDataItemDto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/LessonPlanApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/LessonPlanApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/Comments/PostsComments.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/Comments/PostsCommentsDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/Posts.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/PostsDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/RetrofitClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/RetrofitClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkersActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkersViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/ui/theme/Theme.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +99,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
-        <option value="Kotlin File" />
         <option value="Kotlin Interface" />
+        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -93,6 +122,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.himanshoe/kalendar/1.1.0/cdd4ae9bd267540bf797aaec326a5d2cc5d5b523/kalendar-1.1.0-sources.jar!/com/himanshoe/kalendar/model/KalendarEvent.kt" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -100,6 +132,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2JmDbwqNMoWlVIpnA58BeDKxdx1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -114,18 +149,24 @@
     <property name="SHOW_ALL_PROCESSES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="build.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\STUDIA\S7\PUM_PZ\RIP-Rewak-and-PUM-Mobile\app\src\main\java\com\example\lessonplanapp\Rooms" />
+      <recent name="F:\STUDIA\S7\PUM_PZ\RIP-Rewak-and-PUM-Mobile\app\src\main\java\com\example\lessonplanapp\Workers\WorkerGroup" />
       <recent name="F:\STUDIA\S7\PUM_PZ\RIP-Rewak-and-PUM-Mobile\app\src\main\java\com\example\lessonplanapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\STUDIA\S7\PUM_PZ\RIP-Rewak-and-PUM-Mobile\app\src\main\java\com\example\lessonplanapp\Workers\WorkerName" />
       <recent name="F:\STUDIA\S7\PUM_PZ\RIP-Rewak-and-PUM-Mobile\app\src\main\java\com\example\lessonplanapp\Rooms" />
       <recent name="F:\STUDIA\S7\PUM_PZ\RIP-Rewak-and-PUM-Mobile\app\src\main\java\com\example\lessonplanapp\Buildings" />
     </key>
@@ -317,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672820299151</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="base for building and rooms">
+      <created>1672820725070</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672820725070</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -346,7 +394,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create app" />
     <MESSAGE value="home Page/View&#10;basic of app" />
-    <option name="LAST_COMMIT_MESSAGE" value="home Page/View&#10;basic of app" />
+    <MESSAGE value="base for building and rooms" />
+    <MESSAGE value="base for departments and workers" />
+    <MESSAGE value="connect with api" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect with api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
