@@ -22,6 +22,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.lessonplanapp.CircularProgresBar
 import com.example.lessonplanapp.RetrofitClient
 import com.example.lessonplanapp.ui.theme.LessonPlanAppTheme
 import com.example.lessonplanapp.ui.theme.White
@@ -32,6 +33,7 @@ fun DepartmentsList(workersGroup: String,onClick: (String)->Unit) {
         DepartmentsViewModel(api = RetrofitClient().api, workersGroup)
     }
 
+    val loading = viewModel.loading.value
     val state by viewModel.state.collectAsState()
 
     val rowModifier = Modifier
@@ -62,6 +64,7 @@ fun DepartmentsList(workersGroup: String,onClick: (String)->Unit) {
                         fontSize = 30.sp
                     )
                 }
+                CircularProgresBar(isDisplayed = loading)
                 LazyColumn(
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ){

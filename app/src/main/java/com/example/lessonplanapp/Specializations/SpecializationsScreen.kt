@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.lessonplanapp.CircularProgresBar
 import com.example.lessonplanapp.Day
 import com.example.lessonplanapp.RetrofitClient
 import com.example.lessonplanapp.ui.theme.LessonPlanAppTheme
@@ -37,6 +38,7 @@ fun SpecializationsList(
         SpecializationsViewModel(api = RetrofitClient().api,department,course )
     }
 
+    val loading = viewModel.loading.value
     val state by viewModel.state.collectAsState()
 
     val currentDate = remember { LocalDate.now() }
@@ -76,12 +78,6 @@ fun SpecializationsList(
                         fontSize = 30.sp
                     )
                 }
-
-                Button(onClick = {
-
-                }) {
-
-                }
                 WeekCalendar(
                     Modifier
                         .fillMaxSize()
@@ -96,6 +92,7 @@ fun SpecializationsList(
                         Text(text = it.days[0].date.month.toString(), textAlign = TextAlign.Center, color = White)
                     },
                     weekFooter = {
+                        CircularProgresBar(isDisplayed = loading)
                         showCourse(state = state, day = it.days)
                     }
                 )

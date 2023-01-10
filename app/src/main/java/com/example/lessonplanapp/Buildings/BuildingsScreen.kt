@@ -21,6 +21,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.lessonplanapp.CircularProgresBar
 import com.example.lessonplanapp.RetrofitClient
 import com.example.lessonplanapp.ui.theme.White
 
@@ -30,6 +31,7 @@ fun BuildingList(onClick: (String) ->Unit) {
         BuildingsViewModel(api = RetrofitClient().api)
     }
 
+    val loading = viewModel.loading.value
     val state by viewModel.state.collectAsState()
 
     val rowModifier = Modifier
@@ -59,6 +61,7 @@ fun BuildingList(onClick: (String) ->Unit) {
                 )
 
             }
+            CircularProgresBar(isDisplayed = loading)
             LazyColumn(
                 modifier = Modifier
                     .background(color = Color.Black)

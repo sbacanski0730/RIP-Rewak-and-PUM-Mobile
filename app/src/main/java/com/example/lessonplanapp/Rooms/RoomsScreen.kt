@@ -28,7 +28,7 @@ fun RoomsList(buildingName: String,onClick: (String) ->Unit) {
     val viewModel = remember {
         RoomsViewModel(api = RetrofitClient().api, buildingName)
     }
-
+    val loading = viewModel.loading.value
     val state by viewModel.state.collectAsState()
 
     val rowModifier = Modifier
@@ -57,6 +57,7 @@ fun RoomsList(buildingName: String,onClick: (String) ->Unit) {
                     fontSize = 30.sp
                 )
             }
+            CircularProgresBar(isDisplayed = loading)
             LazyColumn(
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ){

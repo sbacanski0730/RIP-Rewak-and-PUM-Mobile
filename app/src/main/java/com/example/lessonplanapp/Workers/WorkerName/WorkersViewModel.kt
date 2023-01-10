@@ -1,5 +1,6 @@
 package com.example.lessonplanapp.Workers.WorkerName
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.lessonplanapp.LessonPlanApi
@@ -14,10 +15,11 @@ class WorkersViewModel(
     private val departmentName: String,
     private val workerName: String
 ): ViewModel() {
-
+    var loading = mutableStateOf(value = false)
     val state = MutableStateFlow(emptyList<WorkersNameDataItemDto>())
 
     init {
+        loading.value = true
         viewModelScope.launch(Dispatchers.IO) {
             val workers = api.getWorkerName(departmentName,workerName)
             workers.forEach {
@@ -30,6 +32,7 @@ class WorkersViewModel(
             }
 
             state.value = workers
+            loading.value = false
         }
     }
 }

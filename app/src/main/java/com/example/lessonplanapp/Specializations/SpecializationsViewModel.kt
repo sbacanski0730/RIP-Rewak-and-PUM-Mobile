@@ -1,5 +1,6 @@
 package com.example.lessonplanapp.Specializations
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.lessonplanapp.LessonPlanApi
@@ -15,9 +16,11 @@ class SpecializationsViewModel(
     private val course: String
 ): ViewModel() {
 
+    var loading = mutableStateOf(value = false)
     val state = MutableStateFlow(emptyList<SpecializationDataItemDto>())
 
     init {
+        loading.value = true
         viewModelScope.launch(Dispatchers.IO) {
             val specialization = api.getCoursesName(department,course)
 
@@ -31,6 +34,7 @@ class SpecializationsViewModel(
             }
 
             state.value = specialization
+            loading.value = false
 
         }
     }

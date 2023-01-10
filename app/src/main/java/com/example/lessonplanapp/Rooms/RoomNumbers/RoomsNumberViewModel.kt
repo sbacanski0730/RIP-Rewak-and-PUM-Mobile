@@ -1,5 +1,6 @@
 package com.example.lessonplanapp.Rooms.RoomNumbers
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.lessonplanapp.LessonPlanApi
@@ -14,10 +15,11 @@ class RoomsNumberViewModel(
     private val buildingName: String,
     private val roomNumber: String
 ): ViewModel() {
-
+    var loading = mutableStateOf(value = false)
     val state = MutableStateFlow(emptyList<RoomNumbersDataItemDto>())
 
     init {
+        loading.value = true
         viewModelScope.launch(Dispatchers.IO) {
             val numbers = api.getRoomNumber(buildingName, roomNumber)
             numbers.forEach {
@@ -30,6 +32,7 @@ class RoomsNumberViewModel(
             }
 
             state.value = numbers
+            loading.value = false
         }
     }
 }

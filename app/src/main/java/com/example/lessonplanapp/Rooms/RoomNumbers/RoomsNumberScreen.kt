@@ -16,6 +16,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.lessonplanapp.CircularProgresBar
 import com.example.lessonplanapp.Day
 import com.example.lessonplanapp.HomeView
 import com.example.lessonplanapp.RetrofitClient
@@ -34,7 +35,7 @@ fun RoomNumbersList(buildingName: String, roomNumber: String,onClick: (String) -
     val viewModel = remember {
         RoomsNumberViewModel(api = RetrofitClient().api, buildingName, roomNumber)
     }
-
+    val loading = viewModel.loading.value
     val state by viewModel.state.collectAsState()
 
     val currentDate = remember { LocalDate.now() }
@@ -87,6 +88,7 @@ fun RoomNumbersList(buildingName: String, roomNumber: String,onClick: (String) -
                     Text(text = "kalendarz", textAlign = TextAlign.Center, color = White)
                 },
                 weekFooter = {
+                    CircularProgresBar(isDisplayed = loading)
                     showWeek(state = state, day = it.days)
                 }
             )
