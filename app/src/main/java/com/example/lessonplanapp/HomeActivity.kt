@@ -2,6 +2,7 @@ package com.example.lessonplanapp
 
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -27,6 +28,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import androidx.navigation.navOptions
 import com.example.lessonplanapp.Buildings.BuildingList
 import com.example.lessonplanapp.Courses.CoursesList
 import com.example.lessonplanapp.Departments.DepartmentsList
@@ -39,7 +41,6 @@ import com.example.lessonplanapp.ui.theme.White
 
 class HomeActivity : ComponentActivity() {
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent{
@@ -53,14 +54,18 @@ class HomeActivity : ComponentActivity() {
                         })
                     }
 
-
+                    //Workers
                     composable("workersGroup"){
-                        WorkersGroupList(onClick = {navController.navigate(it)})
+                        WorkersGroupList(onClick = {navController.navigate(it, navOptions{
+                            popUpTo(it){inclusive=true}
+                        })})
                     }
                     composable("departments/{workersGroup}", arguments = listOf(navArgument("workersGroup"){type = NavType.StringType})){
                         DepartmentsList(it.arguments?.get("workersGroup") as String,
                             onClick={
-                                navController.navigate(it)
+                                navController.navigate(it, navOptions{
+                                    popUpTo(it){inclusive=true}
+                                })
                             }
                         )
                     }
@@ -71,19 +76,30 @@ class HomeActivity : ComponentActivity() {
                         )){
                         WorkersList(
                             it.arguments?.get("departmentName") as String,
-                            it.arguments?.get("workerName") as String
+                            it.arguments?.get("workerName") as String,
+                            onClick={
+                                navController.navigate(it, navOptions{
+                                    popUpTo(it){inclusive=true}
+                                })
+                            }
                         )
                     }
 
+                    //Buildings
                     composable("buildings"){
                         BuildingList(onClick = {
-                            navController.navigate(it)
+                            navController.navigate(it, navOptions{
+                                popUpTo(it){inclusive=true}
+                            })
                         })
                     }
-                    composable("rooms/{buildingName}", arguments = listOf(navArgument("buildingName"){type = NavType.StringType})){
+                    composable("rooms/{buildingName}", arguments = listOf(navArgument("buildingName"){type = NavType.StringType}))
+                    {
                         RoomsList(it.arguments?.get("buildingName") as String,
                             onClick={
-                                navController.navigate(it)
+                                navController.navigate(it, navOptions{
+                                    popUpTo(it){inclusive=true}
+                                })
                             }
                         )
                     }
@@ -94,16 +110,25 @@ class HomeActivity : ComponentActivity() {
                         )
                     ){
                         RoomNumbersList(it.arguments?.get("buildingName") as String,
-                            it.arguments?.get("roomNumber") as String)
+                            it.arguments?.get("roomNumber") as String,
+                            onClick = {
+                                navController.navigate(it, navOptions{
+                                    popUpTo(it){inclusive=true}
+                                })
+                            }
+                        )
                     }
 
+                    //Courses
                     composable("courses/{departmentName}",
                         arguments = listOf(
                             navArgument("departmentName"){type = NavType.StringType}
                         )
                     ){
                         CoursesList(it.arguments?.get("departmentName") as String,
-                            onClick= { navController.navigate(it) }
+                            onClick= { navController.navigate(it, navOptions{
+                                popUpTo("home"){inclusive=true}
+                            }) }
                         )
                     }
                     composable("courses/{departmentName}/{courseName}",
@@ -113,7 +138,12 @@ class HomeActivity : ComponentActivity() {
                         )
                     ){
                         SpecializationsList(it.arguments?.get("departmentName") as String,
-                            it.arguments?.get("courseName") as String
+                            it.arguments?.get("courseName") as String,
+                            onClick={
+                                navController.navigate(it, navOptions{
+                                    popUpTo(it){inclusive=true}
+                                })
+                            }
                         )
                     }
                 }

@@ -13,54 +13,25 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d5b30fb-9381-4740-ae5f-63803ddebc41" name="Changes" comment="connect with api">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsDataItemDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesDataItemDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/DayCalendar.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentDataItemDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomNumbersData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomNumbersDataItemDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomsNumberScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomsNumberViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/TimeEndDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/TimeStartDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsDataItemDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupDataItemDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupsScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/TimeEndDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/TimeStartDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersNameData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersNameDataItemDto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9d5b30fb-9381-4740-ae5f-63803ddebc41" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationDataItemDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/TimeEndDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/TimeStartDto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/HomeActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/LessonPlanApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/LessonPlanApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/Comments/PostsComments.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/Comments/PostsCommentsDto.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/Posts.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Posts/PostsDto.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/RetrofitClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/RetrofitClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomNumbersDataItemDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomNumbersDataItemDto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomsNumberScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomsNumberScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkersActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkersViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/ui/theme/Theme.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +77,9 @@
       </list>
     </option>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -140,13 +114,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="LessonPlan_App.app" />
     <property name="DEBUGGABLE_DEVICE" value="Pixel_3a_API_33_x86_64 [emulator-5554]" />
     <property name="DEBUGGABLE_PROCESS" value="android.process.acore" />
     <property name="DEBUGGER_ID" value="Auto" />
+    <property name="PROJECT_TRUSTED_KEY" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms" />
@@ -365,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672820725070</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="connect with api">
+      <created>1673347080493</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673347080493</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,7 +363,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/init" />
+                        <option value="origin/documentation" />
                       </list>
                     </value>
                   </entry>

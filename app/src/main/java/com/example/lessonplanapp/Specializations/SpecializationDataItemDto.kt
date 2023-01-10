@@ -1,15 +1,19 @@
-package com.example.lessonplanapp.Rooms.RoomNumbers
+package com.example.lessonplanapp.Specializations
 
 
 import com.google.gson.annotations.SerializedName
 import androidx.annotation.Keep
+import java.time.LocalDate
+import java.time.LocalTime
 
 @Keep
-data class RoomNumbersDataItemDto(
+data class SpecializationDataItemDto(
     @SerializedName("timeStart")
     val timeStart: TimeStartDto,
     @SerializedName("timeEnd")
     val timeEnd: TimeEndDto,
+    @SerializedName("room")
+    val room: String,
     @SerializedName("profesor")
     val profesor: String,
     @SerializedName("subject")

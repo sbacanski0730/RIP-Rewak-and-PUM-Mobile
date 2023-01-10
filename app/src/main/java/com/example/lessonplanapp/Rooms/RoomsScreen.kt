@@ -16,7 +16,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.lessonplanapp.Rooms.RoomsViewModel
 import com.example.lessonplanapp.ui.theme.LessonPlanAppTheme
 import com.example.lessonplanapp.ui.theme.White
@@ -39,13 +41,21 @@ fun RoomsList(buildingName: String,onClick: (String) ->Unit) {
             .padding(10.dp)
             .fillMaxSize()) {
             Row() {
-                Button(onClick = {},border = BorderStroke(1.dp, Color.White),
+                Button(
+                    border = BorderStroke(1.dp, Color.White),
                     shape = RoundedCornerShape(25),
-                    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
+                    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
+                    onClick = { onClick("home") }
+                ) {
+                    Text(text = "Home")
                 }
-                Text(text = buildingName, color = White)
-                Button(onClick = {}) {
-                }
+                Text(
+                    modifier = Modifier.fillMaxWidth(),
+                    text = "$buildingName",
+                    color = White,
+                    textAlign = TextAlign.Center,
+                    fontSize = 30.sp
+                )
             }
             LazyColumn(
                 verticalArrangement = Arrangement.spacedBy(10.dp)

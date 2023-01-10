@@ -5,6 +5,7 @@ import com.example.lessonplanapp.Courses.CoursesData
 import com.example.lessonplanapp.Departments.DepartmentData
 import com.example.lessonplanapp.Rooms.RoomNumbers.RoomNumbersData
 import com.example.lessonplanapp.Rooms.RoomsData
+import com.example.lessonplanapp.Specializations.SpecializationData
 import com.example.lessonplanapp.Workers.WorkerGroup.WorkersGroupData
 import com.example.lessonplanapp.Workers.WorkerName.WorkersNameData
 import retrofit2.http.GET
@@ -35,5 +36,5 @@ interface LessonPlanApi {
         suspend fun getCourses(@Path("departmentName") departmentName: String): CoursesData
 
         @GET("courses/{departmentName}/{courseName}")
-        suspend fun getCoursesName()
+        suspend fun getCoursesName(@Path("departmentName") departmentName: String,@Path("courseName") courseName: String): SpecializationData
 }

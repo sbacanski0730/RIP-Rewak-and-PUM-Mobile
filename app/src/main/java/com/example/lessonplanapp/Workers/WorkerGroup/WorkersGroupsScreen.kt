@@ -1,12 +1,12 @@
 package com.example.lessonplanapp.Workers.WorkerGroup
 
-import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
@@ -40,7 +40,9 @@ fun WorkersGroupList(
 
 
     LessonPlanAppTheme(true) {
-        Box(modifier = Modifier.fillMaxSize().background(color = Color.Black)){
+        Box(modifier = Modifier
+            .fillMaxSize()
+            .background(color = Color.Black)){
 
             Column(
                 modifier = Modifier
@@ -48,13 +50,23 @@ fun WorkersGroupList(
                     .fillMaxSize()
                     .padding(10.dp)
             ) {
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    text = "Szukanie Pracownika",
-                    color = White,
-                    textAlign = TextAlign.Center,
-                    fontSize = 30.sp
-                )
+                Row(modifier = Modifier.fillMaxWidth()) {
+                    Button(
+                        border = BorderStroke(1.dp, Color.White),
+                        shape = RoundedCornerShape(25),
+                        colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
+                        onClick = { onClick("home") }
+                    ) {
+                        Text(text = "Home")
+                    }
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        text = "Szukanie Pracownika",
+                        color = White,
+                        textAlign = TextAlign.Center,
+                        fontSize = 30.sp
+                    )
+                }
                 LazyColumn(
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ){

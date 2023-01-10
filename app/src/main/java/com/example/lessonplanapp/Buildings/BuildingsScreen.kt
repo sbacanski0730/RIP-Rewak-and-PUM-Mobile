@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
@@ -35,36 +36,51 @@ fun BuildingList(onClick: (String) ->Unit) {
         .width(800.dp)
         .height(80.dp)
     val context = LocalContext.current
-    Box(modifier = Modifier.fillMaxSize().background(color = Color.Black))
-    Column(){
-        Text(
-            modifier = Modifier.fillMaxWidth(),
-            text = "Szukanie Budynku",
-            color = White,
-            textAlign = TextAlign.Center,
-            fontSize = 30.sp
-        )
-        LazyColumn(
-            modifier = Modifier
-                .background(color = Color.Black)
-                .padding(10.dp)
-                .fillMaxSize(),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            items(state.sortedBy { it.name }) {
-                Row(rowModifier) {
-                    OutlinedButton(
-                        onClick =
-                        {
-                            onClick("rooms/${it.name}")
-                            Toast.makeText(context, it.name, Toast.LENGTH_SHORT).show()
-                        },
-                        modifier = Modifier.fillMaxSize(),
-                        border = BorderStroke(1.dp, Color.White),
-                        shape = RoundedCornerShape(25),
-                        colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)
-                    ) {
-                        Text(text = it.name)
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .background(color = Color.Black))
+    {
+        Column(){
+            Row() {
+                Button(
+                    border = BorderStroke(1.dp, Color.White),
+                    shape = RoundedCornerShape(25),
+                    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
+                    onClick = { onClick("home") }
+                ) {
+                    Text(text = "Home")
+                }
+                Text(
+                    modifier = Modifier.fillMaxWidth(),
+                    text = "Szukanie Budynku",
+                    color = White,
+                    textAlign = TextAlign.Center,
+                    fontSize = 30.sp
+                )
+
+            }
+            LazyColumn(
+                modifier = Modifier
+                    .background(color = Color.Black)
+                    .padding(10.dp)
+                    .fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                items(state.sortedBy { it.name }) {
+                    Row(rowModifier) {
+                        OutlinedButton(
+                            onClick =
+                            {
+                                onClick("rooms/${it.name}")
+                                Toast.makeText(context, it.name, Toast.LENGTH_SHORT).show()
+                            },
+                            modifier = Modifier.fillMaxSize(),
+                            border = BorderStroke(1.dp, Color.White),
+                            shape = RoundedCornerShape(25),
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)
+                        ) {
+                            Text(text = it.name)
+                        }
                     }
                 }
             }
