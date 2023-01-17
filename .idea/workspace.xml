@@ -15,7 +15,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9d5b30fb-9381-4740-ae5f-63803ddebc41" name="Changes" comment="add progress circle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Buildings/BuildingsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Courses/CoursesScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Departments/DepartmentsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/HomeActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomsNumberScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomNumbers/RoomsNumberScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Rooms/RoomsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Specializations/SpecializationsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerGroup/WorkersGroupsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lessonplanapp/Workers/WorkerName/WorkersScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +75,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="init" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -361,7 +369,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/documentation" />
+                        <option value="feat_selectDate" />
                       </list>
                     </value>
                   </entry>
