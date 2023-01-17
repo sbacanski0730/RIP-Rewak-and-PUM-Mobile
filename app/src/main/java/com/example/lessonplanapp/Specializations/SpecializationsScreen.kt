@@ -10,20 +10,29 @@ import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.lessonplanapp.CircularProgresBar
 import com.example.lessonplanapp.Day
 import com.example.lessonplanapp.RetrofitClient
+import com.example.lessonplanapp.Rooms.RoomNumbers.RoomNumbersDataItemDto
+import com.example.lessonplanapp.Rooms.RoomNumbers.showRoomData
+import com.example.lessonplanapp.Rooms.RoomNumbers.showRoomsDay
+import com.example.lessonplanapp.Rooms.RoomNumbers.showRoomsWeek
 import com.example.lessonplanapp.ui.theme.LessonPlanAppTheme
 import com.example.lessonplanapp.ui.theme.White
 import com.kizitonwose.calendar.compose.WeekCalendar
 import com.kizitonwose.calendar.compose.weekcalendar.rememberWeekCalendarState
 import com.kizitonwose.calendar.core.WeekDay
 import com.kizitonwose.calendar.core.atStartOfMonth
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.YearMonth
@@ -56,26 +65,50 @@ fun SpecializationsList(
 
         )
 
+    fun scrool(){
+        runBlocking {
+            launch {
+                state1.scrollToWeek(currentDate)
+            }
+        }
+    }
+
     LessonPlanAppTheme(true){
         Box(modifier = Modifier
             .fillMaxSize()
             .background(color = Color.Black)) {
             Column(Modifier.fillMaxWidth()) {
-                Row() {
-                    Button(
-                        border = BorderStroke(1.dp, Color.White),
-                        shape = RoundedCornerShape(25),
-                        colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
-                        onClick = { onClick("home") }
-                    ) {
-                        Text(text = "Home")
+                Row(
+//                    Modifier.heightIn(10.dp, 20.dp)
+                ) {
+                    Column() {
+                        Button(
+                            border = BorderStroke(1.dp, Color.White),
+                            shape = RoundedCornerShape(25),
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
+                            onClick = {
+                                onClick("home")
+                            }
+                        ) {
+                            Text(text = "Home")
+                        }
+                        Button(
+                            border = BorderStroke(1.dp, Color.White),
+                            shape = RoundedCornerShape(25),
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
+                            onClick = {
+                                scrool()
+                            }
+                        ) {
+                            Text(text = "Today")
+                        }
                     }
                     Text(
                         modifier = Modifier.fillMaxWidth(),
                         text = "$department / $course",
                         color = White,
                         textAlign = TextAlign.Center,
-                        fontSize = 30.sp
+                        fontSize = 6.em
                     )
                 }
                 WeekCalendar(
@@ -93,7 +126,13 @@ fun SpecializationsList(
                     },
                     weekFooter = {
                         CircularProgresBar(isDisplayed = loading)
-                        showCourse(state = state, day = it.days)
+                        if (selectedDate == null || state1.isScrollInProgress){
+                            selectedDate = null
+                            showCoursesWeek(state = state, day = it.days)
+                        }
+                        else{
+                            showCoursesDay(state, selectedDate!!)
+                        }
                     }
                 )
             }
@@ -103,48 +142,88 @@ fun SpecializationsList(
 }
 
 @Composable
-fun showCourse(state: List<SpecializationDataItemDto>, day: List<WeekDay>){
+fun showCoursesWeek(state: List<SpecializationDataItemDto>, day: List<WeekDay>){
+    var isShowed = false
+
     LessonPlanAppTheme() {
         LazyColumn(){
             state.sortedBy { it.localDate }.groupBy { it.localDate }.forEach() {
                 if (it.key in day[0].date.toString() .. day[6].date.toString()){
                     item {
-                        Column(modifier = Modifier.fillMaxWidth()) {
-                            Row() {
-                                Text(
-                                    text = it.key,
-                                    fontSize = 20.sp,
-                                    color = White
-                                )
-                            }
-                            Row(
-                                modifier = Modifier
-                                    .border(2.dp, color = Color.DarkGray)
-                                    .fillMaxWidth()
-                            ) {
-                                Column() {
-                                    it.value.sortedBy { it.localTime }.forEach() {
-                                        Row(modifier = Modifier
-                                            .border(width = 1.dp, color = Color.LightGray)
-                                            .fillMaxWidth()
-                                        ){
-                                            Column(modifier = Modifier
-                                                .fillMaxWidth(0.2f)
-                                                .border(
-                                                    width = 1.dp, color = Color.LightGray
-                                                )) {
-                                                Text(text = it.localTime,fontSize = 20.sp,color = White)
-                                                Text(text = it.room,fontSize = 20.sp,color = White)
+                        showCoursesData(it)
+                    }
+                    isShowed = true
+                }
+            }
+            if (!isShowed){
+                item {
+                    Text(text = "BRAK ZAJĘĆ",color= White, textAlign = TextAlign.Center, fontSize = 5.em, modifier = Modifier.fillMaxWidth())
+                }
+            }
+        }
+    }
+}
 
-                                            }
-                                            Column() {
-                                                Text(text = it.profesor,fontSize = 20.sp,color = White)
-                                                Text(text = "${it.group} / ${it.subject}",fontSize = 20.sp,color = White)
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+@Composable
+fun showCoursesDay(state: List<SpecializationDataItemDto>, date: LocalDate){
+    var isShowed = false
+
+    LessonPlanAppTheme() {
+        LazyColumn(){
+            state.sortedBy { it.localDate }.groupBy { it.localDate }.forEach() {
+                if (it.key == date.toString()){
+                    item {
+                        showCoursesData(item = it)
+                    }
+                    isShowed = true
+                }
+            }
+            if (!isShowed){
+                item {
+                    Text(text = "BRAK ZAJĘĆ",color= White, textAlign = TextAlign.Center, fontSize = 5.em, modifier = Modifier.fillMaxWidth())
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun showCoursesData(item: Map.Entry<String, List<SpecializationDataItemDto>>){
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Row(Modifier.fillMaxWidth()) {
+            Text(
+                modifier = Modifier.fillMaxWidth(),
+                text = item.key,
+                fontSize = 25.sp,
+                color = White,
+                textAlign = TextAlign.Center
+            )
+        }
+        Row(
+            modifier = Modifier
+                .border(2.dp, color = Color.DarkGray)
+                .fillMaxWidth()
+        ) {
+            Column() {
+                item.value.sortedBy { it.localTime }.forEach() {
+                    Row(modifier = Modifier
+                        .border(width = 1.dp, color = Color.LightGray)
+                        .fillMaxWidth()
+                    ){
+                        Column(modifier = Modifier
+                            .fillMaxWidth(0.2f)
+                            .border(
+                                width = 1.dp, color = Color.LightGray
+                            ),
+                            horizontalAlignment = CenterHorizontally
+                        ) {
+                            Text(text = it.localTime,fontSize = 20.sp,color = White)
+                            Text(text = it.room,fontSize = 20.sp,color = White)
+
+                        }
+                        Column() {
+                            Text(text = it.profesor,fontSize = 20.sp,color = White)
+                            Text(text = "${it.group} / ${it.subject}",fontSize = 20.sp,color = White)
                         }
                     }
                 }

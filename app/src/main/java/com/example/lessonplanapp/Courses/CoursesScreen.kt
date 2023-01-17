@@ -82,7 +82,7 @@ fun CoursesList(departmentName: String,onClick: (String) ->Unit) {
                                 shape = RoundedCornerShape(25),
                                 colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)
                             ) {
-                                Text(text = it.name)
+                                Text(text = it.name, fontSize = 20.sp, textAlign = TextAlign.Center)
                             }
                         }
                     }

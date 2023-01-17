@@ -127,7 +127,7 @@ class HomeActivity : ComponentActivity() {
                     ){
                         CoursesList(it.arguments?.get("departmentName") as String,
                             onClick= { navController.navigate(it, navOptions{
-                                popUpTo("home"){inclusive=true}
+                                popUpTo(it){inclusive=true}
                             }) }
                         )
                     }
@@ -174,7 +174,7 @@ fun HomeView(onClick: (String) ->Unit){
                 text = "LessonPlan",
                 color = White,
                 textAlign = TextAlign.Center,
-                fontSize = 30.sp
+                fontSize = 35.sp
             )
             Row(rowModifier) {
                 OutlinedButton(
@@ -187,7 +187,7 @@ fun HomeView(onClick: (String) ->Unit){
                     shape = RoundedCornerShape(25),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)
                 ) {
-                    Text(text = "Wydział Nauk o Zdrowiu i Kulturze Fizycznej")
+                    Text(text = "Wydział Nauk o Zdrowiu i Kulturze Fizycznej", fontSize = 20.sp, textAlign = TextAlign.Center)
                 }
             }
             Row(rowModifier) {
@@ -200,7 +200,7 @@ fun HomeView(onClick: (String) ->Unit){
                     border = BorderStroke(1.dp, Color.White),
                     shape = RoundedCornerShape(25),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
-                    Text(text = "Wydział Nauk Technicznych i Ekonomicznych")
+                    Text(text = "Wydział Nauk Technicznych i Ekonomicznych", fontSize = 20.sp, textAlign = TextAlign.Center)
                 }
             }
             Row(rowModifier) {
@@ -213,7 +213,7 @@ fun HomeView(onClick: (String) ->Unit){
                     border = BorderStroke(1.dp, Color.White),
                     shape = RoundedCornerShape(25),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
-                    Text(text = "Wydział Nauk Społecznych i Humanistycznych")
+                    Text(text = "Wydział Nauk Społecznych i Humanistycznych", fontSize = 20.sp, textAlign = TextAlign.Center)
                 }
             }
             Row(rowModifier) {
@@ -226,7 +226,7 @@ fun HomeView(onClick: (String) ->Unit){
                     border = BorderStroke(1.dp, Color.White),
                     shape = RoundedCornerShape(25),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
-                    Text(text = "Wychowanie fizyczne")
+                    Text(text = "Wychowanie fizyczne", fontSize = 20.sp, textAlign = TextAlign.Center)
                 }
             }
             Row(rowModifier) {
@@ -239,7 +239,7 @@ fun HomeView(onClick: (String) ->Unit){
                     border = BorderStroke(1.dp, Color.White),
                     shape = RoundedCornerShape(25),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
-                    Text(text = "Erasmus")
+                    Text(text = "Erasmus", fontSize = 20.sp, textAlign = TextAlign.Center)
                 }
             }
             Row(rowModifier) {
@@ -252,7 +252,7 @@ fun HomeView(onClick: (String) ->Unit){
                     border = BorderStroke(1.dp, Color.White),
                     shape = RoundedCornerShape(25),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
-                    Text(text = "Szukaj pracownika")
+                    Text(text = "Szukaj pracownika", fontSize = 20.sp, textAlign = TextAlign.Center)
                 }
             }
             Row(rowModifier) {
@@ -266,7 +266,7 @@ fun HomeView(onClick: (String) ->Unit){
                     border = BorderStroke(1.dp, Color.White),
                     shape = RoundedCornerShape(25),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
-                    Text(text = "Szukaj sali")
+                    Text(text = "Szukaj sali", fontSize = 20.sp, textAlign = TextAlign.Center)
                 }
             }
         }
